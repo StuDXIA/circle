@@ -205,17 +205,9 @@ export default function AboutPage() {
             <h3 className="text-3xl font-bold mb-8">
               君も、この<span className="text-yellow-300">コミュニティ</span>の一員になろう
             </h3>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3">
-                <a href="https://www.instagram.com/rashinbantodai?igsh=ZW02cHQzaWgxaGpn" target="_blank" rel="noopener noreferrer">参加を検討する</a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-500 px-8 py-3"
-              >
-                <Link href="/vision">ビジョンを確認する</Link>
+            <div className="flex justify-center">
+              <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-gray-100 px-10 py-4 text-lg font-semibold">
+                <a href="https://www.instagram.com/rashinbantodai?igsh=ZW02cHQzaWgxaGpn" target="_blank" rel="noopener noreferrer">相談してみる</a>
               </Button>
             </div>
           </div>
