@@ -149,22 +149,16 @@ export default function JoinPage() {
             </h3>
             <p className="text-xl mb-12 text-gray-300">さあ、我々と共に、まだ見ぬ世界へ冒険の帆を張ろう。</p>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div className="flex justify-center">
               <Button
+                asChild
                 size="lg"
-                className="bg-orange-500 hover:bg-orange-400 text-white px-8 py-6 text-lg font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="bg-orange-500 hover:bg-orange-400 text-white px-10 py-6 text-lg font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                <Calendar className="w-5 h-5 mr-2" />
-                活動見学に申し込む
-              </Button>
-
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-6 text-lg font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                最新の新歓情報を確認する
+                <a href="https://www.instagram.com/rashinbantodai?igsh=ZW02cHQzaWgxaGpn" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  相談してみる
+                </a>
               </Button>
             </div>
 
