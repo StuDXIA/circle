@@ -32,13 +32,13 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-blue-500 rounded-full flex items-center justify-center p-1">
+              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-blue-500 rounded-full flex items-center justify-center p-0.5">
                 <Image
                   src="/circle.png"
                   alt="羅針盤"
-                  width={24}
-                  height={24}
-                  className="w-6 h-6 object-contain"
+                  width={32}
+                  height={32}
+                  className="w-7 h-7 object-contain"
                 />
               </div>
               <span className="text-2xl font-bold text-gray-900">羅針盤</span>
@@ -71,13 +71,13 @@ export default function AboutPage() {
 
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 flex items-center justify-center md:justify-start">
               About
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-4 p-2">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-4 p-1">
                 <Image
                   src="/circle.png"
                   alt="羅針盤"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8 object-contain"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
                 />
               </div>
               <span className="text-blue-500">"羅針盤"</span>
