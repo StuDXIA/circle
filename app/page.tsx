@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, Menu, X } from "lucide-react"
 
@@ -35,8 +36,14 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-orange-500 to-blue-500 rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 sm:w-6 sm:h-6 bg-white rounded-full opacity-80"></div>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-orange-500 to-blue-500 rounded-full flex items-center justify-center p-1">
+                <Image
+                  src="/circle.png"
+                  alt="羅針盤"
+                  width={24}
+                  height={24}
+                  className="w-4 h-4 sm:w-6 sm:h-6 object-contain"
+                />
               </div>
               <span className="text-lg sm:text-2xl font-bold text-gray-900">羅針盤</span>
             </Link>
