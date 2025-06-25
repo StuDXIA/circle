@@ -69,15 +69,15 @@ export default function AboutPage() {
               </Link>
             </Button>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 flex items-center justify-center md:justify-start">
-              About
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-4 p-0">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-2 sm:gap-4">
+              <span>About</span>
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center p-0 flex-shrink-0">
                 <Image
                   src="/circle.png"
                   alt="羅針盤"
                   width={48}
                   height={48}
-                  className="w-12 h-12 object-contain"
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
               </div>
               <span className="text-blue-500">"羅針盤"</span>
