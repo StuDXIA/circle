@@ -207,7 +207,7 @@ export default function AboutPage() {
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3">
-                <Link href="/join">参加を検討する</Link>
+                <a href="https://www.instagram.com/rashinbantodai?igsh=ZW02cHQzaWgxaGpn" target="_blank" rel="noopener noreferrer">参加を検討する</a>
               </Button>
               <Button
                 asChild
