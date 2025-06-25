@@ -128,19 +128,6 @@ export default function HomePage() {
               <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mt-6 sm:mt-8">その答えは、ここにある。</p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 text-base sm:text-lg">
-                <a href="https://www.instagram.com/rashinbantodai?igsh=ZW02cHQzaWgxaGpn" target="_blank" rel="noopener noreferrer">今すぐ参加する</a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-blue-500 text-blue-500 hover:bg-blue-50 px-6 sm:px-8 py-3 text-base sm:text-lg"
-              >
-                <Link href="/about">詳しく知る</Link>
-              </Button>
-            </div>
           </div>
         </div>
 
