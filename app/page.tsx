@@ -10,8 +10,21 @@ export default function HomePage() {
   const heroRef = useRef<HTMLDivElement>(null)
   const leadRef = useRef<HTMLDivElement>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [showLoading, setShowLoading] = useState(true)
+  const [showCompass, setShowCompass] = useState(false)
+  const [showText, setShowText] = useState(false)
 
   useEffect(() => {
+    // Loading sequence
+    const loadingTimer = setTimeout(() => {
+      setShowLoading(false)
+      setShowCompass(true)
+    }, 1500)
+
+    const compassTimer = setTimeout(() => {
+      setShowText(true)
+    }, 3000)
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -26,10 +39,35 @@ export default function HomePage() {
     if (heroRef.current) observer.observe(heroRef.current)
     if (leadRef.current) observer.observe(leadRef.current)
 
-    return () => observer.disconnect()
+    return () => {
+      clearTimeout(loadingTimer)
+      clearTimeout(compassTimer)
+      observer.disconnect()
+    }
   }, [])
 
   return (
+    <>
+      {/* Loading Screen */}
+      {showLoading && (
+        <div className="loading-screen">
+          <div className="text-center">
+            <div className="w-32 h-32 mx-auto mb-8 animate-compass-entrance">
+              <Image
+                src="/direction.png"
+                alt="羅針盤"
+                width={128}
+                height={128}
+                className="w-full h-full object-contain animate-compass-glow"
+              />
+            </div>
+            <div className="text-white text-2xl font-bold animate-text-gradient">
+              羅針盤
+            </div>
+          </div>
+        </div>
+      )}
+
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full glass-nav z-50 shadow-lg transition-all duration-300">
@@ -102,33 +140,61 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20 animated-bg-subtle particles">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20 animate-hero-bg particles">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-pink-50/20 to-blue-50/30"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div ref={heroRef} className="opacity-0 transform translate-y-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight text-reveal">
-              <span className="text-gray-900">君の</span><span className="gradient-text animate-text-gradient">「好き」</span><span className="text-gray-900">を、</span>
-              <br />
-              <span className="text-gray-900">人生の</span><span className="gradient-text animate-text-gradient">羅針盤</span><span className="text-gray-900">に。</span>
-            </h1>
-          </div>
-
-          <div ref={leadRef} className="opacity-0 transform translate-y-8 animation-delay-300">
-            <div className="max-w-4xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed space-y-3 sm:space-y-4 mb-8 sm:mb-12">
-              <p>大学という大海原へ、ようこそ。</p>
-              <p>
-                無限の可能性を前に、「何かを始めたい」という熱意と、「何をすればいいのか」という戸惑いが、
-                君の胸に渦巻いているかもしれない。
-              </p>
-              <p>長い受験勉強を乗り越えたそのエネルギーを、次は何に注ぐ？</p>
-              <p className="text-orange-600 font-semibold">もし君が、心から熱中できる何かを探しているなら。</p>
-              <p className="text-blue-600 font-semibold">
-                もし君が、互いを高め合い、本気で未来を語り合える仲間を求めているなら。
-              </p>
-              <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mt-6 sm:mt-8">その答えは、ここにある。</p>
+        
+        {/* Floating Compass */}
+        {showCompass && (
+          <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+            <div className="w-32 h-32 md:w-48 md:h-48 animate-compass-entrance">
+              <Image
+                src="/direction.png"
+                alt="羅針盤"
+                width={192}
+                height={192}
+                className="w-full h-full object-contain animate-compass-float animate-compass-glow"
+              />
             </div>
-
+            {/* Sparkle effects */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 text-yellow-400 animate-sparkle">✨</div>
+            <div className="absolute -bottom-2 -left-2 w-6 h-6 text-blue-400 animate-sparkle" style={{animationDelay: '0.5s'}}>✨</div>
+            <div className="absolute top-1/2 -right-6 w-4 h-4 text-orange-400 animate-sparkle" style={{animationDelay: '1s'}}>✨</div>
           </div>
+        )}
+
+        <div className="container mx-auto px-4 text-center relative z-10">
+          {showText && (
+            <div className="mt-32 md:mt-48">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
+                <span className="animate-text-reveal-stagger text-stagger-delay-1 inline-block text-gray-900">君の</span>
+                <span className="animate-text-reveal-stagger text-stagger-delay-2 inline-block gradient-text animate-text-gradient">「好き」</span>
+                <span className="animate-text-reveal-stagger text-stagger-delay-3 inline-block text-gray-900">を、</span>
+                <br />
+                <span className="animate-text-reveal-stagger text-stagger-delay-4 inline-block text-gray-900">人生の</span>
+                <span className="animate-text-reveal-stagger text-stagger-delay-5 inline-block gradient-text animate-text-gradient">羅針盤</span>
+                <span className="animate-text-reveal-stagger text-stagger-delay-6 inline-block text-gray-900">に。</span>
+              </h1>
+            </div>
+          )}
+        </div>
+
+          {showText && (
+            <div ref={leadRef} className="mt-8">
+              <div className="max-w-4xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed space-y-3 sm:space-y-4 mb-8 sm:mb-12">
+                <p className="animate-text-reveal-stagger text-stagger-delay-7 opacity-0">大学という大海原へ、ようこそ。</p>
+                <p className="animate-text-reveal-stagger opacity-0" style={{animationDelay: '1.6s'}}>
+                  無限の可能性を前に、「何かを始めたい」という熱意と、「何をすればいいのか」という戸惑いが、
+                  君の胸に渦巻いているかもしれない。
+                </p>
+                <p className="animate-text-reveal-stagger opacity-0" style={{animationDelay: '1.8s'}}>長い受験勉強を乗り越えたそのエネルギーを、次は何に注ぐ？</p>
+                <p className="animate-text-reveal-stagger opacity-0 text-orange-600 font-semibold" style={{animationDelay: '2.0s'}}>もし君が、心から熱中できる何かを探しているなら。</p>
+                <p className="animate-text-reveal-stagger opacity-0 text-blue-600 font-semibold" style={{animationDelay: '2.2s'}}>
+                  もし君が、互いを高め合い、本気で未来を語り合える仲間を求めているなら。
+                </p>
+                <p className="animate-text-reveal-stagger opacity-0 text-lg sm:text-xl md:text-2xl font-bold gradient-text-orange-blue mt-6 sm:mt-8" style={{animationDelay: '2.4s'}}>その答えは、ここにある。</p>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -374,5 +440,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   )
 }
