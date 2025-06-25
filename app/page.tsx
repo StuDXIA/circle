@@ -122,35 +122,38 @@ export default function HomePage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20 animate-hero-bg particles">
+        <section className="min-h-screen relative overflow-hidden pt-16 sm:pt-20 animate-hero-bg particles">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-50/40 via-pink-50/30 to-blue-50/40"></div>
           
-          {/* Central Floating Compass */}
-          {showCompass && (
-            <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-              <div className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 animate-compass-entrance">
-                <Image
-                  src="/direction.png"
-                  alt="羅針盤"
-                  width={256}
-                  height={256}
-                  className="w-full h-full object-contain animate-compass-float animate-compass-glow filter drop-shadow-2xl"
-                />
+          <div className="container mx-auto px-6 h-screen flex flex-col justify-center items-center relative z-10">
+            {/* Central Floating Compass */}
+            {showCompass && (
+              <div className="mb-8 md:mb-12">
+                <div className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 animate-compass-entrance relative">
+                  <Image
+                    src="/direction.png"
+                    alt="羅針盤"
+                    width={224}
+                    height={224}
+                    className="w-full h-full object-contain animate-compass-float animate-compass-glow filter drop-shadow-2xl"
+                  />
+                  {/* Enhanced Sparkle effects */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 text-yellow-400 animate-sparkle opacity-80">✨</div>
+                  <div className="absolute -bottom-2 -left-2 w-6 h-6 text-blue-400 animate-sparkle opacity-70" style={{animationDelay: '0.7s'}}>✨</div>
+                  <div className="absolute top-1/2 -right-6 w-4 h-4 text-orange-400 animate-sparkle opacity-75" style={{animationDelay: '1.2s'}}>✨</div>
+                  <div className="absolute -top-1 left-1/4 w-3 h-3 text-purple-400 animate-sparkle opacity-60" style={{animationDelay: '1.8s'}}>✨</div>
+                </div>
               </div>
-              {/* Enhanced Sparkle effects */}
-              <div className="absolute -top-6 -right-6 w-10 h-10 text-yellow-400 animate-sparkle opacity-80">✨</div>
-              <div className="absolute -bottom-4 -left-4 w-8 h-8 text-blue-400 animate-sparkle opacity-70" style={{animationDelay: '0.7s'}}>✨</div>
-              <div className="absolute top-1/2 -right-8 w-6 h-6 text-orange-400 animate-sparkle opacity-75" style={{animationDelay: '1.2s'}}>✨</div>
-              <div className="absolute -top-2 left-1/4 w-4 h-4 text-purple-400 animate-sparkle opacity-60" style={{animationDelay: '1.8s'}}>✨</div>
-            </div>
-          )}
+            )}
 
-          <div className="container mx-auto px-6 text-center relative z-10">
+            {/* Main Content */}
             {showText && (
-              <div className="mt-20 md:mt-32 lg:mt-40">
-                <div className="mb-12 md:mb-16">
-                  <h1 className="text-hero-xl font-black leading-relaxed text-center max-w-4xl mx-auto">
-                    <div className="typewriter-advanced delay-0 text-gray-900 text-glow-effect mb-4">
+              <div className="text-center space-y-8 md:space-y-12 max-w-6xl mx-auto">
+                
+                {/* Main Title */}
+                <div className="space-y-4">
+                  <h1 className="text-hero-xl font-black leading-tight">
+                    <div className="typewriter-advanced delay-0 text-gray-900 text-glow-effect">
                       君の<span className="gradient-text">「好き」</span>を、
                     </div>
                     <div className="typewriter-advanced delay-2 text-gray-900 text-glow-effect">
@@ -158,48 +161,42 @@ export default function HomePage() {
                     </div>
                   </h1>
                 </div>
-              </div>
-            )}
-          </div>
 
-          {showText && (
-            <div ref={leadRef} className="container mx-auto px-6">
-              <div className="max-w-5xl mx-auto space-y-6 md:space-y-8 mb-16">
-                
-                <div className="text-center mb-8">
-                  <p className="typewriter-sentence delay-4 text-hero-md text-gray-800 font-semibold max-w-3xl mx-auto">
-                    大学という大海原へ、ようこそ。
-                  </p>
+                {/* Welcome Message */}
+                <div className="typewriter-sentence delay-4 text-hero-md text-gray-800 font-semibold">
+                  大学という大海原へ、ようこそ。
                 </div>
 
-                <div className="space-y-4 md:space-y-6">
-                  <p className="typewriter-paragraph delay-5 text-hero-sm text-gray-700 text-center max-w-4xl mx-auto px-4">
-                    無限の可能性を前に、「何かを始めたい」という熱意と、「何をすればいいのか」という戸惑いが、君の胸に渦巻いているかもしれない。
+                {/* Content Paragraphs */}
+                <div className="space-y-6 md:space-y-8 max-w-5xl mx-auto">
+                  <p className="typewriter-paragraph delay-5 text-hero-sm text-gray-700 leading-relaxed">
+                    無限の可能性を前に、「何かを始めたい」という熱意と、<br className="hidden md:block" />
+                    「何をすればいいのか」という戸惑いが、君の胸に渦巻いているかもしれない。
                   </p>
 
-                  <p className="typewriter-paragraph delay-6 text-hero-sm text-gray-700 text-center max-w-3xl mx-auto px-4 font-medium">
+                  <p className="typewriter-paragraph delay-6 text-hero-sm text-gray-700 font-medium">
                     長い受験勉強を乗り越えたそのエネルギーを、次は何に注ぐ？
                   </p>
 
-                  <div className="text-center space-y-4 md:space-y-6 mt-8">
-                    <p className="text-reveal-dramatic delay-7 text-hero-md gradient-text-orange-blue font-bold max-w-4xl mx-auto">
+                  <div className="space-y-4 md:space-y-6">
+                    <p className="text-reveal-dramatic delay-7 text-hero-md gradient-text-orange-blue font-bold">
                       もし君が、心から熱中できる何かを探しているなら。
                     </p>
                     
-                    <p className="text-reveal-dramatic delay-8 text-hero-md gradient-text-orange-blue font-bold max-w-4xl mx-auto">
+                    <p className="text-reveal-dramatic delay-8 text-hero-md gradient-text-orange-blue font-bold">
                       もし君が、互いを高め合い、本気で未来を語り合える仲間を求めているなら。
                     </p>
                   </div>
 
-                  <div className="text-center mt-12">
-                    <p className="fade-in-scale delay-9 text-hero-lg font-black text-glow-effect max-w-3xl mx-auto" style={{animationDelay: '9s'}}>
+                  <div className="pt-8">
+                    <p className="fade-in-scale delay-9 text-hero-lg font-black text-glow-effect" style={{animationDelay: '9s'}}>
                       <span className="gradient-text animate-text-gradient">その答えは、ここにある。</span>
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
 
           {showText && (
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce fade-in-scale" style={{animationDelay: '10s'}}>
