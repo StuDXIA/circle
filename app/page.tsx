@@ -11,7 +11,7 @@ export default function HomePage() {
   const leadRef = useRef<HTMLDivElement>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showCompass, setShowCompass] = useState(false)
-  const [showText, setShowText] = useState(false)
+  const [showText, setShowText] = useState(true)
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
@@ -154,27 +154,27 @@ export default function HomePage() {
               {/* Main Content */}
               <div className="space-y-8 md:space-y-10 max-w-6xl mx-auto">
                 <div className="text-center">
-                  <p className="typewriter-paragraph delay-0 text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect">
+                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect opacity-100">
                     <span className="text-orange-500">大学という</span><span className="text-blue-600 mx-2">無限の可能性</span><span className="text-gray-800">を前に、</span><br className="md:hidden" />
                     <span className="text-purple-600 pulse-glow">立ち止まっている君へ。</span>
                   </p>
                 </div>
 
                 <div className="text-center">
-                  <p className="typewriter-paragraph delay-2 text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect">
+                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect opacity-100">
                     <span className="text-red-500">燻らせている</span><span className="text-blue-600 mx-2">その情熱</span><span className="text-gray-700">の、</span><br className="md:hidden" />
                     <span className="text-green-600">次なる舞台は</span><span className="text-orange-600 font-black pulse-glow mx-1">ここにある。</span>
                   </p>
                 </div>
 
                 <div className="py-6 md:py-8 text-center">
-                  <p className="typewriter-paragraph delay-1 text-4xl md:text-5xl lg:text-6xl text-purple-600 font-black text-glow-effect leading-tight animate-scale-pulse pulse-glow bg-gradient-to-r from-purple-50/40 to-pink-50/40 px-6 py-4 rounded-2xl border border-purple-200/30">
+                  <p className="text-4xl md:text-5xl lg:text-6xl text-purple-600 font-black text-glow-effect leading-tight animate-scale-pulse pulse-glow bg-gradient-to-r from-purple-50/40 to-pink-50/40 px-6 py-4 rounded-2xl border border-purple-200/30 opacity-100">
                     未来を、デザインしよう。
                   </p>
                 </div>
 
                 <div className="text-center">
-                  <p className="typewriter-paragraph delay-3 text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect">
+                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect opacity-100">
                     <span className="text-blue-600">東大キャリア支援団体</span><br className="lg:hidden" />
                     <span className="gradient-text font-black text-glow-effect pulse-glow mx-2 text-2xl md:text-3xl">『羅針盤』</span><br className="lg:hidden" />
                     <span className="text-orange-600">へようこそ。</span>
@@ -183,10 +183,10 @@ export default function HomePage() {
 
                 <div className="pt-10 md:pt-12 text-center">
                   <h1 className="text-hero-xl md:text-4xl lg:text-5xl font-black leading-tight">
-                    <div className="typewriter-advanced delay-5 text-gray-900 text-glow-effect pulse-glow mb-4">
+                    <div className="text-gray-900 text-glow-effect pulse-glow mb-4 opacity-100">
                       <span className="text-gray-800">君の</span><span className="gradient-text mx-2">「好き」</span><span className="text-gray-800">を</span><span className="gradient-text mx-2">羅針盤</span><span className="text-gray-800">に、</span>
                     </div>
-                    <div className="typewriter-advanced delay-6 text-gray-900 text-glow-effect pulse-glow">
+                    <div className="text-gray-900 text-glow-effect pulse-glow opacity-100">
                       <span className="text-gray-700">最高の仲間と共に、</span><br className="lg:hidden" />
                       <span className="text-blue-600 font-black">心から熱中できる何か</span><span className="text-gray-700">を見つけよう。</span>
                     </div>
