@@ -398,6 +398,8 @@
   .delay-10 { animation-delay: 15s; }
   .delay-11 { animation-delay: 16.5s; }
   .delay-12 { animation-delay: 18s; }
+  .delay-13 { animation-delay: 19.5s; }
+  .delay-14 { animation-delay: 21s; }
 
   /* Enhanced text sizes */
   .text-hero-xl {

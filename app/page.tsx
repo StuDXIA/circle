@@ -192,11 +192,11 @@ export default function HomePage() {
           </div>
 
           <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 typewriter-advanced fade-in-scale gradient-text-orange-blue text-glow-effect">
                 探索を始めよう
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto typewriter-sentence delay-1 font-medium leading-relaxed">
                 羅針盤が指し示す、3つの扉から君の旅路を選ぼう
               </p>
             </div>
@@ -204,53 +204,53 @@ export default function HomePage() {
             <div className="max-w-6xl mx-auto">
               {/* Desktop Layout */}
               <div className="hidden lg:block">
-                <div className="relative flex items-center justify-center min-h-[600px]">
+                <div className="relative flex items-center justify-center min-h-[700px]">
                   {/* Central Compass */}
-                  <div className="w-48 h-48 xl:w-56 xl:h-56 relative animate-compass-float group z-20">
+                  <div className="w-40 h-40 xl:w-48 xl:h-48 relative animate-compass-float group z-20">
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-blue-400/20 rounded-full blur-xl animate-pulse"></div>
                     <Image
                       src="/circle.png"
                       alt="羅針盤"
-                      width={224}
-                      height={224}
+                      width={192}
+                      height={192}
                       className="w-full h-full object-contain animate-compass-glow transition-all duration-500 group-hover:scale-110 relative z-10"
                     />
                   </div>
 
-                  {/* Navigation Cards with Enhanced Positioning */}
+                  {/* Navigation Cards with Better Spacing */}
                   {/* Vision - Top */}
-                  <a href="#vision" className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4 group-nav">
-                    <div className="navigation-card bg-gradient-to-br from-orange-500 to-red-500 text-white p-8 rounded-2xl w-64 shadow-2xl border border-orange-300/50">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                        <span className="text-2xl">🎯</span>
+                  <a href="#vision" className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 group-nav">
+                    <div className="navigation-card bg-gradient-to-br from-orange-500 to-red-500 text-white p-6 rounded-2xl w-56 shadow-2xl border border-orange-300/50">
+                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 backdrop-blur-sm">
+                        <span className="text-xl">🎯</span>
                       </div>
-                      <h3 className="text-xl font-bold mb-3">Vision</h3>
-                      <p className="text-orange-100 text-sm leading-relaxed">我々の目指す未来とビジョンを知る</p>
-                      <div className="mt-4 text-xs text-orange-200">目標への道筋 →</div>
+                      <h3 className="text-lg font-bold mb-2">Vision</h3>
+                      <p className="text-orange-100 text-xs leading-relaxed">我々の目指す未来とビジョンを知る</p>
+                      <div className="mt-3 text-xs text-orange-200">目標への道筋 →</div>
                     </div>
                   </a>
                   
                   {/* About Us - Bottom Left */}
-                  <a href="#about" className="absolute bottom-0 left-1/4 transform -translate-x-1/2 translate-y-4 group-nav">
-                    <div className="navigation-card bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-8 rounded-2xl w-64 shadow-2xl border border-blue-300/50">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                        <span className="text-2xl">🧭</span>
+                  <a href="#about" className="absolute bottom-0 left-1/3 transform -translate-x-1/2 translate-y-8 group-nav">
+                    <div className="navigation-card bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-6 rounded-2xl w-56 shadow-2xl border border-blue-300/50">
+                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 backdrop-blur-sm">
+                        <span className="text-xl">🧭</span>
                       </div>
-                      <h3 className="text-xl font-bold mb-3">About Us</h3>
-                      <p className="text-blue-100 text-sm leading-relaxed">羅針盤とは何かを詳しく知る</p>
-                      <div className="mt-4 text-xs text-blue-200">私たちの物語 →</div>
+                      <h3 className="text-lg font-bold mb-2">About Us</h3>
+                      <p className="text-blue-100 text-xs leading-relaxed">羅針盤とは何かを詳しく知る</p>
+                      <div className="mt-3 text-xs text-blue-200">私たちの物語 →</div>
                     </div>
                   </a>
                   
                   {/* Join Us - Bottom Right */}
-                  <a href="#join" className="absolute bottom-0 right-1/4 transform translate-x-1/2 translate-y-4 group-nav">
-                    <div className="navigation-card bg-gradient-to-br from-purple-500 to-pink-500 text-white p-8 rounded-2xl w-64 shadow-2xl border border-purple-300/50">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                        <span className="text-2xl">🚀</span>
+                  <a href="#join" className="absolute bottom-0 right-1/3 transform translate-x-1/2 translate-y-8 group-nav">
+                    <div className="navigation-card bg-gradient-to-br from-purple-500 to-pink-500 text-white p-6 rounded-2xl w-56 shadow-2xl border border-purple-300/50">
+                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 backdrop-blur-sm">
+                        <span className="text-xl">🚀</span>
                       </div>
-                      <h3 className="text-xl font-bold mb-3">Join Us</h3>
-                      <p className="text-purple-100 text-sm leading-relaxed">挑戦者として仲間に加わる</p>
-                      <div className="mt-4 text-xs text-purple-200">冒険を始める →</div>
+                      <h3 className="text-lg font-bold mb-2">Join Us</h3>
+                      <p className="text-purple-100 text-xs leading-relaxed">挑戦者として仲間に加わる</p>
+                      <div className="mt-3 text-xs text-purple-200">冒険を始める →</div>
                     </div>
                   </a>
                 </div>
