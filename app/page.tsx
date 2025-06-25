@@ -169,8 +169,8 @@ export default function HomePage() {
                 <div className="text-center">
                   {/* Mobile/Tablet version */}
                   <p className="text-2xl sm:text-3xl md:hidden font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1s'}}>
-                    <span className="text-gray-800">ようこそ、東大キャリア支援団体</span><br />
-                    <span className="text-blue-600 font-black mx-2">『羅針盤』</span><span className="text-gray-800">へ。</span>
+                    <span className="text-gray-800">ようこそ、東大キャリア支援</span><br />
+                    <span className="text-gray-800">団体</span><span className="text-blue-600 font-black mx-2">『羅針盤』</span><span className="text-gray-800">へ。</span>
                   </p>
                   
                   {/* Desktop version with later animation */}
