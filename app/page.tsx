@@ -161,9 +161,17 @@ export default function HomePage() {
                   燻らせているその情熱の、<br className="hidden md:block" />次なる舞台はここにある。
                 </p>
 
+                <p className="typewriter-paragraph delay-3 text-hero-md text-purple-600 font-black text-glow-effect leading-relaxed">
+                  未来を、デザインしよう。
+                </p>
+
+                <p className="typewriter-paragraph delay-4 text-hero-md text-gray-700 font-semibold leading-relaxed">
+                  東大キャリア支援団体<span className="text-orange-600 font-black text-glow-effect">『羅針盤』</span>へようこそ。
+                </p>
+
                 <div className="pt-8">
                   <h1 className="text-hero-lg font-black leading-tight">
-                    <div className="typewriter-advanced delay-4 text-gray-900 text-glow-effect">
+                    <div className="typewriter-advanced delay-5 text-gray-900 text-glow-effect">
                       君の<span className="gradient-text">「好き」</span>を<span className="gradient-text">羅針盤</span>に、
                     </div>
                     <div className="typewriter-advanced delay-6 text-gray-900 text-glow-effect mt-4">
