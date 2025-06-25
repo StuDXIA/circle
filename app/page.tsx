@@ -10,7 +10,6 @@ export default function HomePage() {
   const heroRef = useRef<HTMLDivElement>(null)
   const leadRef = useRef<HTMLDivElement>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [showLoading, setShowLoading] = useState(true)
   const [showCompass, setShowCompass] = useState(false)
   const [showText, setShowText] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -19,15 +18,14 @@ export default function HomePage() {
     // Initial mount
     setIsLoaded(true)
     
-    // Loading sequence with extended timing for compass visibility
-    const loadingTimer = setTimeout(() => {
-      setShowLoading(false)
-      setShowCompass(true)
-    }, 4000) // Extended to 4 seconds for better compass visibility
-
+    // Elegant sequence: Compass appears immediately, then text follows
     const compassTimer = setTimeout(() => {
+      setShowCompass(true)
+    }, 800) // Compass appears after brief delay
+
+    const textTimer = setTimeout(() => {
       setShowText(true)
-    }, 6000) // Extended to 6 seconds for better compass animation visibility
+    }, 3500) // Text appears after compass animation completes
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -44,34 +42,14 @@ export default function HomePage() {
     if (leadRef.current) observer.observe(leadRef.current)
 
     return () => {
-      clearTimeout(loadingTimer)
       clearTimeout(compassTimer)
+      clearTimeout(textTimer)
       observer.disconnect()
     }
   }, [])
 
   return (
     <div>
-      {/* Loading Screen */}
-      {showLoading && (
-        <div className="loading-screen">
-          <div className="text-center">
-            <div className="w-32 h-32 mx-auto mb-8 animate-compass-entrance">
-              <Image
-                src="/direction.png"
-                alt="羅針盤"
-                width={128}
-                height={128}
-                className="w-full h-full object-contain animate-compass-glow"
-              />
-            </div>
-            <div className="text-white text-2xl font-bold animate-text-gradient">
-              羅針盤
-            </div>
-          </div>
-        </div>
-      )}
-
       <div className="min-h-screen bg-white">
         {/* Navigation */}
         <nav className="fixed top-0 w-full glass-nav z-50 shadow-lg transition-all duration-300">
@@ -145,36 +123,37 @@ export default function HomePage() {
 
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20 animate-hero-bg particles">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-pink-50/20 to-blue-50/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-50/40 via-pink-50/30 to-blue-50/40"></div>
           
-          {/* Floating Compass */}
+          {/* Central Floating Compass */}
           {showCompass && (
-            <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-              <div className="w-32 h-32 md:w-48 md:h-48 animate-compass-entrance">
+            <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+              <div className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 animate-compass-entrance">
                 <Image
                   src="/direction.png"
                   alt="羅針盤"
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-contain animate-compass-float animate-compass-glow"
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-contain animate-compass-float animate-compass-glow filter drop-shadow-2xl"
                 />
               </div>
-              {/* Sparkle effects */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 text-yellow-400 animate-sparkle">✨</div>
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 text-blue-400 animate-sparkle" style={{animationDelay: '0.5s'}}>✨</div>
-              <div className="absolute top-1/2 -right-6 w-4 h-4 text-orange-400 animate-sparkle" style={{animationDelay: '1s'}}>✨</div>
+              {/* Enhanced Sparkle effects */}
+              <div className="absolute -top-6 -right-6 w-10 h-10 text-yellow-400 animate-sparkle opacity-80">✨</div>
+              <div className="absolute -bottom-4 -left-4 w-8 h-8 text-blue-400 animate-sparkle opacity-70" style={{animationDelay: '0.7s'}}>✨</div>
+              <div className="absolute top-1/2 -right-8 w-6 h-6 text-orange-400 animate-sparkle opacity-75" style={{animationDelay: '1.2s'}}>✨</div>
+              <div className="absolute -top-2 left-1/4 w-4 h-4 text-purple-400 animate-sparkle opacity-60" style={{animationDelay: '1.8s'}}>✨</div>
             </div>
           )}
 
           <div className="container mx-auto px-4 text-center relative z-10">
             {showText && (
-              <div className="mt-20 md:mt-32">
+              <div className="mt-24 md:mt-40">
                 <div className="mb-16 md:mb-24">
                   <h1 className="text-hero-xl font-black mb-8 leading-tight text-center">
-                    <div className="typewriter-advanced delay-0 text-gray-900 text-glow-effect mb-4">
+                    <div className="typewriter-advanced delay-0 text-gray-900 text-glow-effect mb-6">
                       君の<span className="gradient-text">「好き」</span>を、
                     </div>
-                    <div className="typewriter-advanced delay-3 text-gray-900 text-glow-effect">
+                    <div className="typewriter-advanced delay-2 text-gray-900 text-glow-effect">
                       人生の<span className="gradient-text">羅針盤</span>に。
                     </div>
                   </h1>
@@ -188,36 +167,36 @@ export default function HomePage() {
               <div className="max-w-6xl mx-auto space-y-8 md:space-y-12 mb-16">
                 
                 <div className="text-center mb-12">
-                  <p className="typewriter-sentence delay-6 text-hero-md text-gray-800 font-semibold">
+                  <p className="typewriter-sentence delay-4 text-hero-md text-gray-800 font-semibold">
                     大学という大海原へ、ようこそ。
                   </p>
                 </div>
 
                 <div className="space-y-6 md:space-y-8">
-                  <p className="typewriter-paragraph delay-8 text-hero-sm text-gray-700 text-center px-4">
+                  <p className="typewriter-paragraph delay-5 text-hero-sm text-gray-700 text-center px-4">
                     無限の可能性を前に、「何かを始めたい」という熱意と、
                   </p>
                   
-                  <p className="typewriter-paragraph delay-9 text-hero-sm text-gray-700 text-center px-4">
+                  <p className="typewriter-paragraph delay-6 text-hero-sm text-gray-700 text-center px-4">
                     「何をすればいいのか」という戸惑いが、君の胸に渦巻いているかもしれない。
                   </p>
 
-                  <p className="typewriter-paragraph delay-10 text-hero-sm text-gray-700 text-center px-4 font-medium">
+                  <p className="typewriter-paragraph delay-7 text-hero-sm text-gray-700 text-center px-4 font-medium">
                     長い受験勉強を乗り越えたそのエネルギーを、次は何に注ぐ？
                   </p>
 
                   <div className="text-center space-y-4 md:space-y-6 mt-12">
-                    <p className="text-reveal-dramatic delay-11 text-hero-md gradient-text-orange-blue font-bold">
+                    <p className="text-reveal-dramatic delay-8 text-hero-md gradient-text-orange-blue font-bold">
                       もし君が、心から熱中できる何かを探しているなら。
                     </p>
                     
-                    <p className="text-reveal-dramatic delay-12 text-hero-md gradient-text-orange-blue font-bold">
+                    <p className="text-reveal-dramatic delay-9 text-hero-md gradient-text-orange-blue font-bold">
                       もし君が、互いを高め合い、本気で未来を語り合える仲間を求めているなら。
                     </p>
                   </div>
 
                   <div className="text-center mt-16">
-                    <p className="fade-in-scale delay-12 text-hero-lg font-black text-glow-effect" style={{animationDelay: '13s'}}>
+                    <p className="fade-in-scale delay-10 text-hero-lg font-black text-glow-effect" style={{animationDelay: '10s'}}>
                       <span className="gradient-text animate-text-gradient">その答えは、ここにある。</span>
                     </p>
                   </div>
@@ -227,7 +206,7 @@ export default function HomePage() {
           )}
 
           {showText && (
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce fade-in-scale" style={{animationDelay: '14s'}}>
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce fade-in-scale" style={{animationDelay: '11s'}}>
               <ChevronDown className="w-8 h-8 text-gray-400" />
             </div>
           )}
