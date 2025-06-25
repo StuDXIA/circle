@@ -34,13 +34,13 @@ export default function VisionPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-blue-500 rounded-full flex items-center justify-center p-0">
+              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-blue-500 rounded-full flex items-center justify-center p-0">
                 <Image
                   src="/circle.png"
                   alt="羅針盤"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8 object-contain"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
                 />
               </div>
               <span className="text-2xl font-bold text-gray-900">羅針盤</span>
