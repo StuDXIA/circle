@@ -285,6 +285,21 @@
     transform: rotateY(15deg) rotateX(10deg);
   }
 
+  /* Navigation group hover effects */
+  .group-nav:hover .card-enhanced {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Compass navigation layout */
+  .compass-nav-layout {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+
   /* Hero entrance animations */
   .animate-compass-entrance {
     animation: compassEntrance 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;

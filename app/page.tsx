@@ -237,36 +237,71 @@ export default function HomePage() {
       {/* Navigation Section */}
       <section className="py-20 animated-bg-subtle">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 stagger">
-            <a href="#vision" className="group transform-3d">
-              <div className="card-enhanced text-center p-8 rounded-xl hover-lift-enhanced rotate-3d">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-float group-hover:animate-glow transition-all duration-500">
-                  <span className="text-2xl text-white">🎯</span>
+          <div className="max-w-4xl mx-auto">
+            {/* Central Compass Design */}
+            <div className="relative flex items-center justify-center">
+              {/* Central Compass */}
+              <div className="w-48 h-48 md:w-64 md:h-64 relative animate-compass-float group">
+                <Image
+                  src="/circle.png"
+                  alt="羅針盤"
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-contain animate-compass-glow transition-all duration-500 group-hover:scale-110"
+                />
+                
+                {/* Navigation Options Positioned Around Compass */}
+                <div className="absolute inset-0">
+                  {/* Vision - Top */}
+                  <a href="#vision" className="absolute -top-16 left-1/2 transform -translate-x-1/2 group-nav">
+                    <div className="card-enhanced text-center p-6 rounded-xl hover-lift-enhanced transform-3d bg-white/90 backdrop-blur-sm border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 min-w-[200px]">
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-all duration-300">Vision</h3>
+                      <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">我々の目指す未来とビジョンを知る</p>
+                    </div>
+                  </a>
+                  
+                  {/* About Us - Left */}
+                  <a href="#about" className="absolute top-1/2 -left-32 transform -translate-y-1/2 group-nav">
+                    <div className="card-enhanced text-center p-6 rounded-xl hover-lift-enhanced transform-3d bg-white/90 backdrop-blur-sm border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 min-w-[200px]">
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-500 transition-all duration-300">About Us</h3>
+                      <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">羅針盤とは何かを詳しく知る</p>
+                    </div>
+                  </a>
+                  
+                  {/* Join Us - Right */}
+                  <a href="#join" className="absolute top-1/2 -right-32 transform -translate-y-1/2 group-nav">
+                    <div className="card-enhanced text-center p-6 rounded-xl hover-lift-enhanced transform-3d bg-white/90 backdrop-blur-sm border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 min-w-[200px]">
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-all duration-300">Join Us</h3>
+                      <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">挑戦者として仲間に加わる</p>
+                    </div>
+                  </a>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-all duration-300">Vision</h3>
-                <p className="text-gray-600 group-hover:text-gray-800 transition-colors">我々の目指す未来とビジョンを知る</p>
               </div>
-            </a>
-
-            <a href="#about" className="group transform-3d">
-              <div className="card-enhanced text-center p-8 rounded-xl hover-lift-enhanced rotate-3d">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-float group-hover:animate-glow transition-all duration-500" style={{animationDelay: '1s'}}>
-                  <span className="text-2xl text-white">🧭</span>
+            </div>
+            
+            {/* Mobile Layout */}
+            <div className="md:hidden mt-16 grid gap-6">
+              <a href="#vision" className="group transform-3d">
+                <div className="card-enhanced text-center p-6 rounded-xl hover-lift-enhanced bg-white/90 backdrop-blur-sm border-2 border-orange-200 hover:border-orange-400 transition-all duration-300">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-all duration-300">Vision</h3>
+                  <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">我々の目指す未来とビジョンを知る</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-500 transition-all duration-300">About Us</h3>
-                <p className="text-gray-600 group-hover:text-gray-800 transition-colors">羅針盤とは何かを詳しく知る</p>
-              </div>
-            </a>
-
-            <a href="#join" className="group transform-3d">
-              <div className="card-enhanced text-center p-8 rounded-xl hover-lift-enhanced rotate-3d">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 via-pink-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-float group-hover:animate-glow transition-all duration-500" style={{animationDelay: '2s'}}>
-                  <span className="text-2xl text-white">🚀</span>
+              </a>
+              
+              <a href="#about" className="group transform-3d">
+                <div className="card-enhanced text-center p-6 rounded-xl hover-lift-enhanced bg-white/90 backdrop-blur-sm border-2 border-blue-200 hover:border-blue-400 transition-all duration-300">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-500 transition-all duration-300">About Us</h3>
+                  <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">羅針盤とは何かを詳しく知る</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-all duration-300">Join Us</h3>
-                <p className="text-gray-600 group-hover:text-gray-800 transition-colors">挑戦者として仲間に加わる</p>
-              </div>
-            </a>
+              </a>
+              
+              <a href="#join" className="group transform-3d">
+                <div className="card-enhanced text-center p-6 rounded-xl hover-lift-enhanced bg-white/90 backdrop-blur-sm border-2 border-orange-200 hover:border-orange-400 transition-all duration-300">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-all duration-300">Join Us</h3>
+                  <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">挑戦者として仲間に加わる</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
