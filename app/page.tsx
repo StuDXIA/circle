@@ -164,42 +164,70 @@ export default function HomePage() {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           {showText && (
-            <div className="mt-32 md:mt-48">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
-                <span className="animate-text-reveal-stagger text-stagger-delay-1 inline-block text-gray-900">君の</span>
-                <span className="animate-text-reveal-stagger text-stagger-delay-2 inline-block gradient-text animate-text-gradient">「好き」</span>
-                <span className="animate-text-reveal-stagger text-stagger-delay-3 inline-block text-gray-900">を、</span>
-                <br />
-                <span className="animate-text-reveal-stagger text-stagger-delay-4 inline-block text-gray-900">人生の</span>
-                <span className="animate-text-reveal-stagger text-stagger-delay-5 inline-block gradient-text animate-text-gradient">羅針盤</span>
-                <span className="animate-text-reveal-stagger text-stagger-delay-6 inline-block text-gray-900">に。</span>
-              </h1>
+            <div className="mt-20 md:mt-32">
+              <div className="mb-16 md:mb-24">
+                <h1 className="text-hero-xl font-black mb-8 leading-tight text-center">
+                  <div className="typewriter-advanced delay-0 text-gray-900 text-glow-effect mb-4">
+                    君の<span className="gradient-text">「好き」</span>を、
+                  </div>
+                  <div className="typewriter-advanced delay-3 text-gray-900 text-glow-effect">
+                    人生の<span className="gradient-text">羅針盤</span>に。
+                  </div>
+                </h1>
+              </div>
             </div>
           )}
         </div>
 
           {showText && (
             <div ref={leadRef} className="mt-8">
-              <div className="max-w-4xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed space-y-3 sm:space-y-4 mb-8 sm:mb-12">
-                <p className="animate-text-reveal-stagger text-stagger-delay-7 opacity-0">大学という大海原へ、ようこそ。</p>
-                <p className="animate-text-reveal-stagger opacity-0" style={{animationDelay: '1.6s'}}>
-                  無限の可能性を前に、「何かを始めたい」という熱意と、「何をすればいいのか」という戸惑いが、
-                  君の胸に渦巻いているかもしれない。
-                </p>
-                <p className="animate-text-reveal-stagger opacity-0" style={{animationDelay: '1.8s'}}>長い受験勉強を乗り越えたそのエネルギーを、次は何に注ぐ？</p>
-                <p className="animate-text-reveal-stagger opacity-0 text-orange-600 font-semibold" style={{animationDelay: '2.0s'}}>もし君が、心から熱中できる何かを探しているなら。</p>
-                <p className="animate-text-reveal-stagger opacity-0 text-blue-600 font-semibold" style={{animationDelay: '2.2s'}}>
-                  もし君が、互いを高め合い、本気で未来を語り合える仲間を求めているなら。
-                </p>
-                <p className="animate-text-reveal-stagger opacity-0 text-lg sm:text-xl md:text-2xl font-bold gradient-text-orange-blue mt-6 sm:mt-8" style={{animationDelay: '2.4s'}}>その答えは、ここにある。</p>
+              <div className="max-w-6xl mx-auto space-y-8 md:space-y-12 mb-16">
+                
+                <div className="text-center mb-12">
+                  <p className="typewriter-sentence delay-6 text-hero-md text-gray-800 font-semibold">
+                    大学という大海原へ、ようこそ。
+                  </p>
+                </div>
+
+                <div className="space-y-6 md:space-y-8">
+                  <p className="typewriter-paragraph delay-8 text-hero-sm text-gray-700 text-center px-4">
+                    無限の可能性を前に、「何かを始めたい」という熱意と、
+                  </p>
+                  
+                  <p className="typewriter-paragraph delay-9 text-hero-sm text-gray-700 text-center px-4">
+                    「何をすればいいのか」という戸惑いが、君の胸に渦巻いているかもしれない。
+                  </p>
+
+                  <p className="typewriter-paragraph delay-10 text-hero-sm text-gray-700 text-center px-4 font-medium">
+                    長い受験勉強を乗り越えたそのエネルギーを、次は何に注ぐ？
+                  </p>
+
+                  <div className="text-center space-y-4 md:space-y-6 mt-12">
+                    <p className="text-reveal-dramatic delay-11 text-hero-md gradient-text-orange-blue font-bold">
+                      もし君が、心から熱中できる何かを探しているなら。
+                    </p>
+                    
+                    <p className="text-reveal-dramatic delay-12 text-hero-md gradient-text-orange-blue font-bold">
+                      もし君が、互いを高め合い、本気で未来を語り合える仲間を求めているなら。
+                    </p>
+                  </div>
+
+                  <div className="text-center mt-16">
+                    <p className="fade-in-scale delay-12 text-hero-lg font-black text-glow-effect" style={{animationDelay: '13s'}}>
+                      <span className="gradient-text animate-text-gradient">その答えは、ここにある。</span>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           )}
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-gray-400" />
-        </div>
+        {showText && (
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce fade-in-scale" style={{animationDelay: '14s'}}>
+            <ChevronDown className="w-8 h-8 text-gray-400" />
+          </div>
+        )}
       </section>
 
       {/* Navigation Section */}
