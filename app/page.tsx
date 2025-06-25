@@ -122,13 +122,13 @@ export default function HomePage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="min-h-screen relative overflow-hidden pt-16 sm:pt-20 md:pt-28 lg:pt-32 animate-hero-bg particles">
+        <section className="min-h-screen relative overflow-hidden pt-12 sm:pt-16 md:pt-28 lg:pt-32 animate-hero-bg particles">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-50/40 via-pink-50/30 to-blue-50/40"></div>
           
-          <div className="container mx-auto px-4 sm:px-6 flex flex-col justify-center items-center relative z-10 py-6 sm:py-8 md:py-12 lg:py-16">
+          <div className="container mx-auto px-3 sm:px-4 md:px-6 flex flex-col justify-center items-center relative z-10 h-screen">
             {/* Central Floating Compass - Always present but animated */}
-            <div className="mt-4 sm:mt-8 md:mt-12 lg:mt-16 mb-6 sm:mb-8 md:mb-12">
-              <div className={`w-48 h-48 sm:w-52 sm:h-52 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 relative transition-all duration-1000 ${showCompass ? 'animate-compass-entrance' : 'opacity-0'}`}>
+            <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+              <div className={`w-56 h-56 sm:w-60 sm:h-60 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 relative transition-all duration-1000 ${showCompass ? 'animate-compass-entrance' : 'opacity-0'}`}>
                 <Image
                   src="/direction.png"
                   alt="羅針盤"
@@ -149,21 +149,29 @@ export default function HomePage() {
             </div>
 
             {/* Main Content */}
-            <div className={`text-center space-y-6 sm:space-y-8 md:space-y-12 max-w-6xl mx-auto transition-all duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`text-center space-y-8 sm:space-y-10 md:space-y-12 max-w-6xl mx-auto transition-all duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
               
               {/* Main Content */}
-              <div className="space-y-6 sm:space-y-8 md:space-y-10 max-w-6xl mx-auto px-2 sm:px-4">
+              <div className="space-y-8 sm:space-y-10 md:space-y-10 max-w-6xl mx-auto px-1 sm:px-2 md:px-4">
                 <div className="text-center">
-                  <p className="text-2xl sm:text-3xl md:text-hero-lg lg:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '0.5s'}}>
+                  <p className="text-3xl sm:text-4xl md:text-hero-lg lg:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '0.5s'}}>
                     <span className="text-orange-600 font-black">好き</span><span className="text-gray-700">を</span><span className="text-blue-600 font-black mx-1">羅針盤</span><span className="text-gray-700">に、</span><br className="sm:hidden" />
                     <span className="text-gray-700">最高の仲間と</span><span className="text-orange-600 font-black mx-1">熱中</span><span className="text-gray-700">できる未来を描こう。</span>
                   </p>
                 </div>
 
                 <div className="text-center">
-                  <p className="text-xl sm:text-2xl md:text-hero-lg lg:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1s'}}>
+                  <p className="text-2xl sm:text-3xl md:text-hero-lg lg:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1s'}}>
                     <span className="text-gray-800">ようこそ、東大キャリア支援団体</span><br className="md:hidden" />
                     <span className="text-blue-600 font-black mx-2">『羅針盤』</span><span className="text-gray-800">へ。</span>
+                  </p>
+                </div>
+
+                {/* Additional content for mobile to fill screen */}
+                <div className="text-center md:hidden mt-12">
+                  <p className="text-lg sm:text-xl font-medium text-gray-600 leading-relaxed animate-fade-in-slide px-4" style={{animationDelay: '1.5s'}}>
+                    自分らしい人生を歩むための<br />
+                    <span className="text-orange-600 font-bold">新しい扉</span>が、ここにある。
                   </p>
                 </div>
 
