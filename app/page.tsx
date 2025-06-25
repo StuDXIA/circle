@@ -151,48 +151,25 @@ export default function HomePage() {
             {/* Main Content */}
             <div className={`text-center space-y-8 md:space-y-12 max-w-6xl mx-auto transition-all duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
               
-              {/* Main Title */}
-              <div className="space-y-4">
-                <h1 className="text-hero-xl font-black leading-tight">
-                  <div className="typewriter-advanced delay-0 text-gray-900 text-glow-effect">
-                    君の<span className="gradient-text">「好き」</span>を、
-                  </div>
-                  <div className="typewriter-advanced delay-2 text-gray-900 text-glow-effect">
-                    人生の<span className="gradient-text">羅針盤</span>に。
-                  </div>
-                </h1>
-              </div>
-
-              {/* Welcome Message */}
-              <div className="typewriter-sentence delay-4 text-hero-md text-gray-800 font-semibold">
-                大学という大海原へ、ようこそ。
-              </div>
-
-              {/* Content Paragraphs */}
+              {/* Main Content */}
               <div className="space-y-6 md:space-y-8 max-w-5xl mx-auto">
-                <p className="typewriter-paragraph delay-5 text-hero-sm text-gray-700 leading-relaxed">
-                  無限の可能性を前に、「何かを始めたい」という熱意と、<br className="hidden md:block" />
-                  「何をすればいいのか」という戸惑いが、君の胸に渦巻いているかもしれない。
+                <p className="typewriter-paragraph delay-0 text-hero-md text-gray-800 font-semibold leading-relaxed">
+                  大学という無限の可能性を前に、<br className="hidden md:block" />立ち止まっている君へ。
                 </p>
 
-                <p className="typewriter-paragraph delay-6 text-hero-sm text-gray-700 font-medium">
-                  長い受験勉強を乗り越えたそのエネルギーを、次は何に注ぐ？
+                <p className="typewriter-paragraph delay-2 text-hero-md text-gray-700 font-medium leading-relaxed">
+                  燻らせているその情熱の、<br className="hidden md:block" />次なる舞台はここにある。
                 </p>
 
-                <div className="space-y-4 md:space-y-6">
-                  <p className="text-reveal-dramatic delay-7 text-hero-md gradient-text-orange-blue font-bold">
-                    もし君が、心から熱中できる何かを探しているなら。
-                  </p>
-                  
-                  <p className="text-reveal-dramatic delay-8 text-hero-md gradient-text-orange-blue font-bold">
-                    もし君が、互いを高め合い、本気で未来を語り合える仲間を求めているなら。
-                  </p>
-                </div>
-
-                <div className="pt-8">
-                  <p className="fade-in-scale delay-9 text-hero-lg font-black text-glow-effect" style={{animationDelay: '9s'}}>
-                    <span className="gradient-text animate-text-gradient">その答えは、ここにある。</span>
-                  </p>
+                <div className="pt-4">
+                  <h1 className="text-hero-lg font-black leading-tight">
+                    <div className="text-reveal-dramatic delay-4 text-gray-900 text-glow-effect">
+                      君の<span className="gradient-text">「好き」</span>を<span className="gradient-text">羅針盤</span>に、
+                    </div>
+                    <div className="text-reveal-dramatic delay-5 text-gray-900 text-glow-effect mt-2">
+                      最高の仲間と共に、心から熱中できる何かを見つけよう。
+                    </div>
+                  </h1>
                 </div>
               </div>
             </div>
