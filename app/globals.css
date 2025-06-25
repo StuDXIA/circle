@@ -438,6 +438,11 @@
     animation: sparkle 2s ease-in-out infinite;
   }
 
+  .animate-fade-in-slide {
+    opacity: 0;
+    animation: fadeInSlide 1.2s ease-out forwards;
+  }
+
   /* Loading screen styles */
   .loading-screen {
     position: fixed;
@@ -640,6 +645,17 @@
   50% {
     opacity: 1;
     transform: scale(1) rotate(180deg);
+  }
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

@@ -154,41 +154,41 @@ export default function HomePage() {
               {/* Main Content */}
               <div className="space-y-8 md:space-y-10 max-w-6xl mx-auto">
                 <div className="text-center">
-                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect opacity-100">
-                    <span className="text-orange-500">大学という</span><span className="text-blue-600 mx-2">無限の可能性</span><span className="text-gray-800">を前に、</span><br className="md:hidden" />
-                    <span className="text-purple-600 pulse-glow">立ち止まっている君へ。</span>
+                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '0.5s'}}>
+                    <span className="text-gray-800">大学という</span><span className="text-gray-700 mx-2">無限の可能性</span><span className="text-gray-800">を前に、</span><br className="md:hidden" />
+                    <span className="text-gray-900">立ち止まっている君へ。</span>
                   </p>
                 </div>
 
                 <div className="text-center">
-                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect opacity-100">
-                    <span className="text-red-500">燻らせている</span><span className="text-blue-600 mx-2">その情熱</span><span className="text-gray-700">の、</span><br className="md:hidden" />
-                    <span className="text-green-600">次なる舞台は</span><span className="text-orange-600 font-black pulse-glow mx-1">ここにある。</span>
+                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1s'}}>
+                    <span className="text-gray-700">燻らせている</span><span className="text-gray-800 mx-2">その情熱</span><span className="text-gray-700">の、</span><br className="md:hidden" />
+                    <span className="text-gray-800">次なる舞台は</span><span className="text-orange-600 font-black mx-1">ここにある。</span>
                   </p>
                 </div>
 
                 <div className="py-6 md:py-8 text-center">
-                  <p className="text-4xl md:text-5xl lg:text-6xl text-purple-600 font-black text-glow-effect leading-tight animate-scale-pulse pulse-glow bg-gradient-to-r from-purple-50/40 to-pink-50/40 px-6 py-4 rounded-2xl border border-purple-200/30 opacity-100">
+                  <p className="text-4xl md:text-5xl lg:text-6xl text-gray-900 font-black leading-tight animate-fade-in-slide px-6 py-4" style={{animationDelay: '1.5s'}}>
                     未来を、デザインしよう。
                   </p>
                 </div>
 
                 <div className="text-center">
-                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect opacity-100">
-                    <span className="text-blue-600">東大キャリア支援団体</span><br className="lg:hidden" />
-                    <span className="gradient-text font-black text-glow-effect pulse-glow mx-2 text-2xl md:text-3xl">『羅針盤』</span><br className="lg:hidden" />
-                    <span className="text-orange-600">へようこそ。</span>
+                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '2s'}}>
+                    <span className="text-gray-800">東大キャリア支援団体</span><br className="lg:hidden" />
+                    <span className="text-blue-600 font-black mx-2 text-2xl md:text-3xl">『羅針盤』</span><br className="lg:hidden" />
+                    <span className="text-gray-800">へようこそ。</span>
                   </p>
                 </div>
 
                 <div className="pt-10 md:pt-12 text-center">
                   <h1 className="text-hero-xl md:text-4xl lg:text-5xl font-black leading-tight">
-                    <div className="text-gray-900 text-glow-effect pulse-glow mb-4 opacity-100">
-                      <span className="text-gray-800">君の</span><span className="gradient-text mx-2">「好き」</span><span className="text-gray-800">を</span><span className="gradient-text mx-2">羅針盤</span><span className="text-gray-800">に、</span>
+                    <div className="text-gray-900 mb-4 animate-fade-in-slide" style={{animationDelay: '2.5s'}}>
+                      <span className="text-gray-800">君の</span><span className="text-orange-600 mx-2">「好き」</span><span className="text-gray-800">を</span><span className="text-blue-600 mx-2">羅針盤</span><span className="text-gray-800">に、</span>
                     </div>
-                    <div className="text-gray-900 text-glow-effect pulse-glow opacity-100">
+                    <div className="text-gray-900 animate-fade-in-slide" style={{animationDelay: '3s'}}>
                       <span className="text-gray-700">最高の仲間と共に、</span><br className="lg:hidden" />
-                      <span className="text-blue-600 font-black">心から熱中できる何か</span><span className="text-gray-700">を見つけよう。</span>
+                      <span className="text-gray-900 font-black">心から熱中できる何か</span><span className="text-gray-700">を見つけよう。</span>
                     </div>
                   </h1>
                 </div>
