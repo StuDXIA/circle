@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Calendar, MessageCircle, Users, Star } from "lucide-react"
 
@@ -31,9 +32,14 @@ export default function JoinPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-blue-500 rounded-full flex items-center justify-center">
-                {/* 羅針盤アイコンをここに挿入 */}
-                <div className="w-6 h-6 bg-white rounded-full opacity-80"></div>
+              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-blue-500 rounded-full flex items-center justify-center p-0">
+                <Image
+                  src="/circle.png"
+                  alt="羅針盤"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 object-contain"
+                />
               </div>
               <span className="text-2xl font-bold text-gray-900">羅針盤</span>
             </Link>
@@ -65,18 +71,10 @@ export default function JoinPage() {
 
             <div className="flex items-center justify-center md:justify-start mb-8">
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mr-4">Join</h1>
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center">
-                {/* 参加アイコンをここに挿入 */}
-                <div className="w-8 h-8 bg-white rounded-full opacity-90"></div>
-              </div>
               <span className="text-5xl md:text-6xl font-bold text-orange-500 ml-4">Us</span>
             </div>
 
             <div className="flex items-center justify-center md:justify-start mb-12">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mr-3">
-                {/* 新しい挑戦者アイコンをここに挿入 */}
-                <div className="w-6 h-6 bg-white rounded-full opacity-90"></div>
-              </div>
               <h2 className="text-2xl md:text-3xl font-bold text-blue-600">新たな挑戦者へ</h2>
             </div>
           </div>
