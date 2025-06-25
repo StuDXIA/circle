@@ -25,7 +25,7 @@ export default function HomePage() {
 
     const textTimer = setTimeout(() => {
       setShowText(true)
-    }, 3500) // Text appears after compass animation completes
+    }, 3000) // Text appears after compass animation completes
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -161,12 +161,12 @@ export default function HomePage() {
                   燻らせているその情熱の、<br className="hidden md:block" />次なる舞台はここにある。
                 </p>
 
-                <div className="pt-4">
+                <div className="pt-8">
                   <h1 className="text-hero-lg font-black leading-tight">
-                    <div className="text-reveal-dramatic delay-4 text-gray-900 text-glow-effect">
+                    <div className="typewriter-advanced delay-4 text-gray-900 text-glow-effect">
                       君の<span className="gradient-text">「好き」</span>を<span className="gradient-text">羅針盤</span>に、
                     </div>
-                    <div className="text-reveal-dramatic delay-5 text-gray-900 text-glow-effect mt-2">
+                    <div className="typewriter-advanced delay-6 text-gray-900 text-glow-effect mt-4">
                       最高の仲間と共に、心から熱中できる何かを見つけよう。
                     </div>
                   </h1>
