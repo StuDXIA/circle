@@ -149,33 +149,39 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quick Preview Section */}
+      {/* Navigation Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-orange-500">🎯</span>
+            <Link href="/vision" className="group">
+              <div className="text-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-105">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
+                  <span className="text-2xl text-orange-500">🎯</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-colors">Vision</h3>
+                <p className="text-gray-600">我々の目指す未来とビジョンを知る</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Vision</h3>
-              <p className="text-gray-600">自らの意志で人生を選択し、自己実現を果たす</p>
-            </div>
+            </Link>
 
-            <div className="text-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-blue-500">🧭</span>
+            <Link href="/about" className="group">
+              <div className="text-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-105">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+                  <span className="text-2xl text-blue-500">🧭</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-500 transition-colors">About Us</h3>
+                <p className="text-gray-600">羅針盤とは何かを詳しく知る</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Community</h3>
-              <p className="text-gray-600">挑戦者のためのコミュニティ</p>
-            </div>
+            </Link>
 
-            <div className="text-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🚀</span>
+            <Link href="/join" className="group">
+              <div className="text-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-orange-200 group-hover:to-blue-200 transition-all">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-colors">Join Us</h3>
+                <p className="text-gray-600">挑戦者として仲間に加わる</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Action</h3>
-              <p className="text-gray-600">本気の行動で未来を掴み取る</p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
