@@ -84,18 +84,10 @@ export default function AboutPage() {
             </h1>
 
             <div className="flex items-center justify-center md:justify-start mb-8">
-              <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mr-3">
-                {/* チャレンジャーアイコンをここに挿入 */}
-                <div className="w-6 h-6 bg-white rounded-full opacity-90"></div>
-              </div>
               <h2 className="text-2xl md:text-3xl font-bold text-orange-600">挑戦者のためのコミュニティ</h2>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-blue-500 flex items-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                {/* 自己実現アイコンをここに挿入 */}
-                <div className="w-8 h-8 bg-white rounded-full opacity-90"></div>
-              </div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-blue-500">
               <p className="text-xl font-semibold text-gray-900">
                 【全員が<span className="text-orange-500">自己実現</span>できる楽しい環境を】
               </p>
