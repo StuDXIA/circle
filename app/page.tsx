@@ -153,20 +153,15 @@ export default function HomePage() {
               
               {/* Main Content */}
               <div className="space-y-8 md:space-y-10 max-w-6xl mx-auto">
-                <div className="py-6 md:py-8 text-center">
-                  <p className="text-4xl md:text-5xl lg:text-6xl text-gray-900 font-black leading-tight animate-fade-in-slide px-6 py-4" style={{animationDelay: '0.5s'}}>
-                    未来を、デザインしよう。
+                <div className="text-center">
+                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '0.5s'}}>
+                    <span className="text-orange-600 font-black">好き</span><span className="text-gray-700">を</span><span className="text-blue-600 font-black mx-1">羅針盤</span><span className="text-gray-700">に、</span><br className="md:hidden" />
+                    <span className="text-gray-700">最高の仲間と</span><span className="text-orange-600 font-black mx-1">熱中</span><span className="text-gray-700">できる未来を描こう。</span>
                   </p>
                 </div>
 
                 <div className="text-center">
                   <p className="text-hero-lg md:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1s'}}>
-                    <span className="text-gray-700">燻る情熱を、最高の仲間と</span><span className="text-orange-600 font-black mx-1">「熱中」</span><span className="text-gray-700">に変える場所へ。</span>
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1.5s'}}>
                     <span className="text-gray-800">ようこそ、東大キャリア支援団体</span><br className="lg:hidden" />
                     <span className="text-blue-600 font-black mx-2 text-2xl md:text-3xl">『羅針盤』</span><span className="text-gray-800">へ。</span>
                   </p>
