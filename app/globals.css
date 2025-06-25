@@ -287,7 +287,7 @@
 
   /* Hero entrance animations */
   .animate-compass-entrance {
-    animation: compassEntrance 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: compassEntrance 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   }
 
   .animate-compass-float {
@@ -440,13 +440,23 @@
 @keyframes compassEntrance {
   0% {
     opacity: 0;
-    transform: scale(0.3) rotate(-180deg) translateY(-100px);
-    filter: blur(10px);
+    transform: scale(0.1) rotate(-360deg) translateY(-200px);
+    filter: blur(20px);
+  }
+  25% {
+    opacity: 0.3;
+    transform: scale(0.5) rotate(-180deg) translateY(-100px);
+    filter: blur(15px);
   }
   50% {
     opacity: 0.7;
-    transform: scale(1.1) rotate(0deg) translateY(-20px);
-    filter: blur(2px);
+    transform: scale(0.8) rotate(-90deg) translateY(-50px);
+    filter: blur(8px);
+  }
+  75% {
+    opacity: 0.9;
+    transform: scale(1.2) rotate(0deg) translateY(-10px);
+    filter: blur(3px);
   }
   100% {
     opacity: 1;

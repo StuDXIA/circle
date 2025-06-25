@@ -13,17 +13,21 @@ export default function HomePage() {
   const [showLoading, setShowLoading] = useState(true)
   const [showCompass, setShowCompass] = useState(false)
   const [showText, setShowText] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    // Loading sequence
+    // Initial mount
+    setIsLoaded(true)
+    
+    // Loading sequence with extended timing for compass visibility
     const loadingTimer = setTimeout(() => {
       setShowLoading(false)
       setShowCompass(true)
-    }, 1500)
+    }, 4000) // Extended to 4 seconds for better compass visibility
 
     const compassTimer = setTimeout(() => {
       setShowText(true)
-    }, 3000)
+    }, 6000) // Extended to 6 seconds for better compass animation visibility
 
     const observer = new IntersectionObserver(
       (entries) => {
