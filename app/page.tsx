@@ -154,15 +154,28 @@ export default function HomePage() {
               {/* Main Content */}
               <div className="space-y-8 sm:space-y-10 md:space-y-10 max-w-6xl mx-auto px-1 sm:px-2 md:px-4">
                 <div className="text-center">
-                  <p className="text-3xl sm:text-4xl md:text-hero-lg lg:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '0.5s'}}>
+                  {/* Mobile/Tablet version with earlier animation */}
+                  <p className="text-3xl sm:text-4xl md:hidden font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '0.5s'}}>
                     <span className="text-orange-600 font-black">好き</span><span className="text-gray-700">を</span><span className="text-blue-600 font-black mx-1">羅針盤</span><span className="text-gray-700">に、</span><br className="sm:hidden" />
                     <span className="text-gray-700">最高の仲間と</span><span className="text-orange-600 font-black mx-1">熱中</span><span className="text-gray-700">できる未来を描こう。</span>
+                  </p>
+                  
+                  {/* Desktop version with later animation and no break */}
+                  <p className="hidden md:block text-hero-lg lg:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1.5s'}}>
+                    <span className="text-orange-600 font-black">好き</span><span className="text-gray-700">を</span><span className="text-blue-600 font-black mx-1">羅針盤</span><span className="text-gray-700">に、最高の仲間と</span><span className="text-orange-600 font-black mx-1">熱中</span><span className="text-gray-700">できる未来を描こう。</span>
                   </p>
                 </div>
 
                 <div className="text-center">
-                  <p className="text-2xl sm:text-3xl md:text-hero-lg lg:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1s'}}>
-                    <span className="text-gray-800">ようこそ、東大キャリア支援団体</span><br className="md:hidden" />
+                  {/* Mobile/Tablet version */}
+                  <p className="text-2xl sm:text-3xl md:hidden font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1s'}}>
+                    <span className="text-gray-800">ようこそ、東大キャリア支援団体</span><br />
+                    <span className="text-blue-600 font-black mx-2">『羅針盤』</span><span className="text-gray-800">へ。</span>
+                  </p>
+                  
+                  {/* Desktop version with later animation */}
+                  <p className="hidden md:block text-hero-lg lg:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '2.5s'}}>
+                    <span className="text-gray-800">ようこそ、東大キャリア支援団体</span>
                     <span className="text-blue-600 font-black mx-2">『羅針盤』</span><span className="text-gray-800">へ。</span>
                   </p>
                 </div>
