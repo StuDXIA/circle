@@ -122,13 +122,13 @@ export default function HomePage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="min-h-screen relative overflow-hidden pt-20 sm:pt-24 md:pt-28 lg:pt-32 animate-hero-bg particles">
+        <section className="min-h-screen relative overflow-hidden pt-16 sm:pt-20 md:pt-28 lg:pt-32 animate-hero-bg particles">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-50/40 via-pink-50/30 to-blue-50/40"></div>
           
-          <div className="container mx-auto px-6 flex flex-col justify-start items-center relative z-10 py-8 md:py-12 lg:py-16">
+          <div className="container mx-auto px-4 sm:px-6 flex flex-col justify-center items-center relative z-10 py-6 sm:py-8 md:py-12 lg:py-16">
             {/* Central Floating Compass - Always present but animated */}
-            <div className="mt-8 md:mt-12 lg:mt-16 mb-8 md:mb-12">
-              <div className={`w-40 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 relative transition-all duration-1000 ${showCompass ? 'animate-compass-entrance' : 'opacity-0'}`}>
+            <div className="mt-4 sm:mt-8 md:mt-12 lg:mt-16 mb-6 sm:mb-8 md:mb-12">
+              <div className={`w-48 h-48 sm:w-52 sm:h-52 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 relative transition-all duration-1000 ${showCompass ? 'animate-compass-entrance' : 'opacity-0'}`}>
                 <Image
                   src="/direction.png"
                   alt="羅針盤"
@@ -149,20 +149,20 @@ export default function HomePage() {
             </div>
 
             {/* Main Content */}
-            <div className={`text-center space-y-8 md:space-y-12 max-w-6xl mx-auto transition-all duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`text-center space-y-6 sm:space-y-8 md:space-y-12 max-w-6xl mx-auto transition-all duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
               
               {/* Main Content */}
-              <div className="space-y-8 md:space-y-10 max-w-6xl mx-auto">
+              <div className="space-y-6 sm:space-y-8 md:space-y-10 max-w-6xl mx-auto px-2 sm:px-4">
                 <div className="text-center">
-                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '0.5s'}}>
-                    <span className="text-orange-600 font-black">好き</span><span className="text-gray-700">を</span><span className="text-blue-600 font-black mx-1">羅針盤</span><span className="text-gray-700">に、</span><br className="md:hidden" />
+                  <p className="text-2xl sm:text-3xl md:text-hero-lg lg:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '0.5s'}}>
+                    <span className="text-orange-600 font-black">好き</span><span className="text-gray-700">を</span><span className="text-blue-600 font-black mx-1">羅針盤</span><span className="text-gray-700">に、</span><br className="sm:hidden" />
                     <span className="text-gray-700">最高の仲間と</span><span className="text-orange-600 font-black mx-1">熱中</span><span className="text-gray-700">できる未来を描こう。</span>
                   </p>
                 </div>
 
                 <div className="text-center">
-                  <p className="text-hero-lg md:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1s'}}>
-                    <span className="text-gray-800">ようこそ、東大キャリア支援団体</span><br className="lg:hidden" />
+                  <p className="text-xl sm:text-2xl md:text-hero-lg lg:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1s'}}>
+                    <span className="text-gray-800">ようこそ、東大キャリア支援団体</span><br className="md:hidden" />
                     <span className="text-blue-600 font-black mx-2">『羅針盤』</span><span className="text-gray-800">へ。</span>
                   </p>
                 </div>
@@ -200,53 +200,71 @@ export default function HomePage() {
             <div className="max-w-6xl mx-auto">
               {/* Desktop Layout */}
               <div className="hidden lg:block">
-                <div className="relative flex items-center justify-center min-h-[700px]">
+                <div className="relative flex items-center justify-center min-h-[800px]">
                   {/* Central Compass */}
-                  <div className="w-40 h-40 xl:w-48 xl:h-48 relative animate-compass-float group z-20">
+                  <div className="w-52 h-52 xl:w-60 xl:h-60 relative animate-compass-float group z-20">
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-blue-400/20 rounded-full blur-xl animate-pulse"></div>
                     <Image
                       src="/circle.png"
                       alt="羅針盤"
-                      width={192}
-                      height={192}
+                      width={240}
+                      height={240}
                       className="w-full h-full object-contain animate-compass-glow transition-all duration-500 group-hover:scale-110 relative z-10"
                     />
                   </div>
 
                   {/* Navigation Cards with Better Spacing */}
                   {/* Vision - Top */}
-                  <a href="#vision" className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 group-nav">
-                    <div className="navigation-card bg-gradient-to-br from-orange-500 to-red-500 text-white p-6 rounded-2xl w-56 shadow-2xl border border-orange-300/50">
-                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 backdrop-blur-sm">
-                        <span className="text-xl">🎯</span>
+                  <a href="#vision" className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-12 group-nav">
+                    <div className="navigation-card bg-gradient-to-br from-orange-500 to-red-500 text-white p-8 rounded-3xl w-72 xl:w-80 shadow-2xl border border-orange-300/50">
+                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm overflow-hidden">
+                        <Image
+                          src="/vision.png"
+                          alt="Vision"
+                          width={56}
+                          height={56}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <h3 className="text-lg font-bold mb-2">Vision</h3>
-                      <p className="text-orange-100 text-xs leading-relaxed">我々の目指す未来とビジョンを知る</p>
-                      <div className="mt-3 text-xs text-orange-200">目標への道筋 →</div>
+                      <h3 className="text-xl font-bold mb-3">Vision</h3>
+                      <p className="text-orange-100 text-sm leading-relaxed mb-2">我々の目指す未来とビジョンを知る</p>
+                      <div className="text-sm text-orange-200 font-medium">目標への道筋 →</div>
                     </div>
                   </a>
                   
                   {/* About Us - Bottom Left */}
-                  <a href="#about" className="absolute bottom-0 left-1/3 transform -translate-x-1/2 translate-y-8 group-nav">
-                    <div className="navigation-card bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-6 rounded-2xl w-56 shadow-2xl border border-blue-300/50">
-                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 backdrop-blur-sm">
-                        <span className="text-xl">🧭</span>
+                  <a href="#about" className="absolute bottom-0 left-1/4 transform -translate-x-1/2 translate-y-12 group-nav">
+                    <div className="navigation-card bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-8 rounded-3xl w-72 xl:w-80 shadow-2xl border border-blue-300/50">
+                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm overflow-hidden">
+                        <Image
+                          src="/about us.png"
+                          alt="About Us"
+                          width={56}
+                          height={56}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <h3 className="text-lg font-bold mb-2">About Us</h3>
-                      <p className="text-blue-100 text-xs leading-relaxed">羅針盤とは何かを詳しく知る</p>
-                      <div className="mt-3 text-xs text-blue-200">私たちの物語 →</div>
+                      <h3 className="text-xl font-bold mb-3">About Us</h3>
+                      <p className="text-blue-100 text-sm leading-relaxed mb-2">羅針盤とは何かを詳しく知る</p>
+                      <div className="text-sm text-blue-200 font-medium">私たちの物語 →</div>
                     </div>
                   </a>
                   
                   {/* Join Us - Bottom Right */}
-                  <a href="#join" className="absolute bottom-0 right-1/3 transform translate-x-1/2 translate-y-8 group-nav">
-                    <div className="navigation-card bg-gradient-to-br from-purple-500 to-pink-500 text-white p-6 rounded-2xl w-56 shadow-2xl border border-purple-300/50">
-                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 backdrop-blur-sm">
-                        <span className="text-xl">🚀</span>
+                  <a href="#join" className="absolute bottom-0 right-1/4 transform translate-x-1/2 translate-y-12 group-nav">
+                    <div className="navigation-card bg-gradient-to-br from-purple-500 to-pink-500 text-white p-8 rounded-3xl w-72 xl:w-80 shadow-2xl border border-purple-300/50">
+                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm overflow-hidden">
+                        <Image
+                          src="/join us.png"
+                          alt="Join Us"
+                          width={56}
+                          height={56}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <h3 className="text-lg font-bold mb-2">Join Us</h3>
-                      <p className="text-purple-100 text-xs leading-relaxed">挑戦者として仲間に加わる</p>
-                      <div className="mt-3 text-xs text-purple-200">冒険を始める →</div>
+                      <h3 className="text-xl font-bold mb-3">Join Us</h3>
+                      <p className="text-purple-100 text-sm leading-relaxed mb-2">挑戦者として仲間に加わる</p>
+                      <div className="text-sm text-purple-200 font-medium">冒険を始める →</div>
                     </div>
                   </a>
                 </div>
@@ -269,8 +287,14 @@ export default function HomePage() {
                 <div className="grid grid-cols-3 gap-8">
                   <a href="#vision" className="group">
                     <div className="navigation-card bg-gradient-to-br from-orange-500 to-red-500 text-white p-6 rounded-2xl text-center shadow-xl">
-                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <span className="text-lg">🎯</span>
+                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 overflow-hidden">
+                        <Image
+                          src="/vision.png"
+                          alt="Vision"
+                          width={40}
+                          height={40}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <h3 className="text-lg font-bold mb-2">Vision</h3>
                       <p className="text-orange-100 text-sm">我々の目指す未来とビジョンを知る</p>
@@ -279,8 +303,14 @@ export default function HomePage() {
                   
                   <a href="#about" className="group">
                     <div className="navigation-card bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-6 rounded-2xl text-center shadow-xl">
-                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <span className="text-lg">🧭</span>
+                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 overflow-hidden">
+                        <Image
+                          src="/about us.png"
+                          alt="About Us"
+                          width={40}
+                          height={40}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <h3 className="text-lg font-bold mb-2">About Us</h3>
                       <p className="text-blue-100 text-sm">羅針盤とは何かを詳しく知る</p>
@@ -289,8 +319,14 @@ export default function HomePage() {
                   
                   <a href="#join" className="group">
                     <div className="navigation-card bg-gradient-to-br from-purple-500 to-pink-500 text-white p-6 rounded-2xl text-center shadow-xl">
-                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <span className="text-lg">🚀</span>
+                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 overflow-hidden">
+                        <Image
+                          src="/join us.png"
+                          alt="Join Us"
+                          width={40}
+                          height={40}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <h3 className="text-lg font-bold mb-2">Join Us</h3>
                       <p className="text-purple-100 text-sm">挑戦者として仲間に加わる</p>
@@ -317,8 +353,14 @@ export default function HomePage() {
                   <a href="#vision" className="block group">
                     <div className="navigation-card bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 rounded-2xl shadow-xl">
                       <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-xl">🎯</span>
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                          <Image
+                            src="/vision.png"
+                            alt="Vision"
+                            width={48}
+                            height={48}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <div>
                           <h3 className="text-lg font-bold mb-1">Vision</h3>
@@ -331,8 +373,14 @@ export default function HomePage() {
                   <a href="#about" className="block group">
                     <div className="navigation-card bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 rounded-2xl shadow-xl">
                       <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-xl">🧭</span>
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                          <Image
+                            src="/about us.png"
+                            alt="About Us"
+                            width={48}
+                            height={48}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <div>
                           <h3 className="text-lg font-bold mb-1">About Us</h3>
@@ -345,8 +393,14 @@ export default function HomePage() {
                   <a href="#join" className="block group">
                     <div className="navigation-card bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-2xl shadow-xl">
                       <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-xl">🚀</span>
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                          <Image
+                            src="/join us.png"
+                            alt="Join Us"
+                            width={48}
+                            height={48}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <div>
                           <h3 className="text-lg font-bold mb-1">Join Us</h3>
