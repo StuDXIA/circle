@@ -128,12 +128,12 @@ export default function HomePage() {
           <div className="container mx-auto px-6 flex flex-col justify-start items-center relative z-10 py-8 md:py-12 lg:py-16">
             {/* Central Floating Compass - Always present but animated */}
             <div className="mt-8 md:mt-12 lg:mt-16 mb-8 md:mb-12">
-              <div className={`w-32 h-32 md:w-44 md:h-44 lg:w-48 lg:h-48 xl:w-52 xl:h-52 relative transition-all duration-1000 ${showCompass ? 'animate-compass-entrance' : 'opacity-0'}`}>
+              <div className={`w-40 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 relative transition-all duration-1000 ${showCompass ? 'animate-compass-entrance' : 'opacity-0'}`}>
                 <Image
                   src="/direction.png"
                   alt="羅針盤"
-                  width={224}
-                  height={224}
+                  width={320}
+                  height={320}
                   className="w-full h-full object-contain animate-compass-float animate-compass-glow filter drop-shadow-2xl"
                 />
                 {/* Enhanced Sparkle effects */}
@@ -163,7 +163,7 @@ export default function HomePage() {
                 <div className="text-center">
                   <p className="text-hero-lg md:text-hero-xl font-bold leading-tight animate-fade-in-slide" style={{animationDelay: '1s'}}>
                     <span className="text-gray-800">ようこそ、東大キャリア支援団体</span><br className="lg:hidden" />
-                    <span className="text-blue-600 font-black mx-2 text-2xl md:text-3xl">『羅針盤』</span><span className="text-gray-800">へ。</span>
+                    <span className="text-blue-600 font-black mx-2">『羅針盤』</span><span className="text-gray-800">へ。</span>
                   </p>
                 </div>
 
