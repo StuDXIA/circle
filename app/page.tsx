@@ -122,13 +122,13 @@ export default function HomePage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="min-h-screen relative overflow-hidden pt-16 sm:pt-20 animate-hero-bg particles">
+        <section className="min-h-screen relative overflow-hidden pt-20 sm:pt-24 md:pt-28 lg:pt-32 animate-hero-bg particles">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-50/40 via-pink-50/30 to-blue-50/40"></div>
           
-          <div className="container mx-auto px-6 h-screen flex flex-col justify-center items-center relative z-10">
+          <div className="container mx-auto px-6 flex flex-col justify-start items-center relative z-10 py-8 md:py-12 lg:py-16">
             {/* Central Floating Compass - Always present but animated */}
-            <div className="mb-8 md:mb-12">
-              <div className={`w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 relative transition-all duration-1000 ${showCompass ? 'animate-compass-entrance' : 'opacity-0'}`}>
+            <div className="mt-8 md:mt-12 lg:mt-16 mb-8 md:mb-12">
+              <div className={`w-32 h-32 md:w-44 md:h-44 lg:w-48 lg:h-48 xl:w-52 xl:h-52 relative transition-all duration-1000 ${showCompass ? 'animate-compass-entrance' : 'opacity-0'}`}>
                 <Image
                   src="/direction.png"
                   alt="羅針盤"
@@ -152,30 +152,43 @@ export default function HomePage() {
             <div className={`text-center space-y-8 md:space-y-12 max-w-6xl mx-auto transition-all duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
               
               {/* Main Content */}
-              <div className="space-y-6 md:space-y-8 max-w-5xl mx-auto">
-                <p className="typewriter-paragraph delay-0 text-hero-md text-gray-800 font-semibold leading-relaxed">
-                  大学という無限の可能性を前に、<br className="hidden md:block" />立ち止まっている君へ。
-                </p>
+              <div className="space-y-8 md:space-y-10 max-w-6xl mx-auto">
+                <div className="text-center">
+                  <p className="typewriter-paragraph delay-0 text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect">
+                    <span className="text-orange-500">大学という</span><span className="text-blue-600 mx-2">無限の可能性</span><span className="text-gray-800">を前に、</span><br className="md:hidden" />
+                    <span className="text-purple-600 pulse-glow">立ち止まっている君へ。</span>
+                  </p>
+                </div>
 
-                <p className="typewriter-paragraph delay-2 text-hero-md text-gray-700 font-medium leading-relaxed">
-                  燻らせているその情熱の、<br className="hidden md:block" />次なる舞台はここにある。
-                </p>
+                <div className="text-center">
+                  <p className="typewriter-paragraph delay-2 text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect">
+                    <span className="text-red-500">燻らせている</span><span className="text-blue-600 mx-2">その情熱</span><span className="text-gray-700">の、</span><br className="md:hidden" />
+                    <span className="text-green-600">次なる舞台は</span><span className="text-orange-600 font-black pulse-glow mx-1">ここにある。</span>
+                  </p>
+                </div>
 
-                <p className="typewriter-paragraph delay-3 text-hero-md text-purple-600 font-black text-glow-effect leading-relaxed">
-                  未来を、デザインしよう。
-                </p>
+                <div className="py-6 md:py-8 text-center">
+                  <p className="typewriter-paragraph delay-1 text-4xl md:text-5xl lg:text-6xl text-purple-600 font-black text-glow-effect leading-tight animate-scale-pulse pulse-glow bg-gradient-to-r from-purple-50/40 to-pink-50/40 px-6 py-4 rounded-2xl border border-purple-200/30">
+                    未来を、デザインしよう。
+                  </p>
+                </div>
 
-                <p className="typewriter-paragraph delay-4 text-hero-md text-gray-700 font-semibold leading-relaxed">
-                  東大キャリア支援団体<span className="text-orange-600 font-black text-glow-effect">『羅針盤』</span>へようこそ。
-                </p>
+                <div className="text-center">
+                  <p className="typewriter-paragraph delay-3 text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect">
+                    <span className="text-blue-600">東大キャリア支援団体</span><br className="lg:hidden" />
+                    <span className="gradient-text font-black text-glow-effect pulse-glow mx-2 text-2xl md:text-3xl">『羅針盤』</span><br className="lg:hidden" />
+                    <span className="text-orange-600">へようこそ。</span>
+                  </p>
+                </div>
 
-                <div className="pt-8">
-                  <h1 className="text-hero-lg font-black leading-tight">
-                    <div className="typewriter-advanced delay-5 text-gray-900 text-glow-effect">
-                      君の<span className="gradient-text">「好き」</span>を<span className="gradient-text">羅針盤</span>に、
+                <div className="pt-10 md:pt-12 text-center">
+                  <h1 className="text-hero-xl md:text-4xl lg:text-5xl font-black leading-tight">
+                    <div className="typewriter-advanced delay-5 text-gray-900 text-glow-effect pulse-glow mb-4">
+                      <span className="text-gray-800">君の</span><span className="gradient-text mx-2">「好き」</span><span className="text-gray-800">を</span><span className="gradient-text mx-2">羅針盤</span><span className="text-gray-800">に、</span>
                     </div>
-                    <div className="typewriter-advanced delay-6 text-gray-900 text-glow-effect mt-4">
-                      最高の仲間と共に、心から熱中できる何かを見つけよう。
+                    <div className="typewriter-advanced delay-6 text-gray-900 text-glow-effect pulse-glow">
+                      <span className="text-gray-700">最高の仲間と共に、</span><br className="lg:hidden" />
+                      <span className="text-blue-600 font-black">心から熱中できる何か</span><span className="text-gray-700">を見つけよう。</span>
                     </div>
                   </h1>
                 </div>
