@@ -145,12 +145,12 @@ export default function HomePage() {
             </div>
           )}
 
-          <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="container mx-auto px-6 text-center relative z-10">
             {showText && (
-              <div className="mt-24 md:mt-40">
-                <div className="mb-16 md:mb-24">
-                  <h1 className="text-hero-xl font-black mb-8 leading-tight text-center">
-                    <div className="typewriter-advanced delay-0 text-gray-900 text-glow-effect mb-6">
+              <div className="mt-20 md:mt-32 lg:mt-40">
+                <div className="mb-12 md:mb-16">
+                  <h1 className="text-hero-xl font-black leading-relaxed text-center max-w-4xl mx-auto">
+                    <div className="typewriter-advanced delay-0 text-gray-900 text-glow-effect mb-4">
                       君の<span className="gradient-text">「好き」</span>を、
                     </div>
                     <div className="typewriter-advanced delay-2 text-gray-900 text-glow-effect">
@@ -163,40 +163,36 @@ export default function HomePage() {
           </div>
 
           {showText && (
-            <div ref={leadRef} className="mt-8">
-              <div className="max-w-6xl mx-auto space-y-8 md:space-y-12 mb-16">
+            <div ref={leadRef} className="container mx-auto px-6">
+              <div className="max-w-5xl mx-auto space-y-6 md:space-y-8 mb-16">
                 
-                <div className="text-center mb-12">
-                  <p className="typewriter-sentence delay-4 text-hero-md text-gray-800 font-semibold">
+                <div className="text-center mb-8">
+                  <p className="typewriter-sentence delay-4 text-hero-md text-gray-800 font-semibold max-w-3xl mx-auto">
                     大学という大海原へ、ようこそ。
                   </p>
                 </div>
 
-                <div className="space-y-6 md:space-y-8">
-                  <p className="typewriter-paragraph delay-5 text-hero-sm text-gray-700 text-center px-4">
-                    無限の可能性を前に、「何かを始めたい」という熱意と、
-                  </p>
-                  
-                  <p className="typewriter-paragraph delay-6 text-hero-sm text-gray-700 text-center px-4">
-                    「何をすればいいのか」という戸惑いが、君の胸に渦巻いているかもしれない。
+                <div className="space-y-4 md:space-y-6">
+                  <p className="typewriter-paragraph delay-5 text-hero-sm text-gray-700 text-center max-w-4xl mx-auto px-4">
+                    無限の可能性を前に、「何かを始めたい」という熱意と、「何をすればいいのか」という戸惑いが、君の胸に渦巻いているかもしれない。
                   </p>
 
-                  <p className="typewriter-paragraph delay-7 text-hero-sm text-gray-700 text-center px-4 font-medium">
+                  <p className="typewriter-paragraph delay-6 text-hero-sm text-gray-700 text-center max-w-3xl mx-auto px-4 font-medium">
                     長い受験勉強を乗り越えたそのエネルギーを、次は何に注ぐ？
                   </p>
 
-                  <div className="text-center space-y-4 md:space-y-6 mt-12">
-                    <p className="text-reveal-dramatic delay-8 text-hero-md gradient-text-orange-blue font-bold">
+                  <div className="text-center space-y-4 md:space-y-6 mt-8">
+                    <p className="text-reveal-dramatic delay-7 text-hero-md gradient-text-orange-blue font-bold max-w-4xl mx-auto">
                       もし君が、心から熱中できる何かを探しているなら。
                     </p>
                     
-                    <p className="text-reveal-dramatic delay-9 text-hero-md gradient-text-orange-blue font-bold">
+                    <p className="text-reveal-dramatic delay-8 text-hero-md gradient-text-orange-blue font-bold max-w-4xl mx-auto">
                       もし君が、互いを高め合い、本気で未来を語り合える仲間を求めているなら。
                     </p>
                   </div>
 
-                  <div className="text-center mt-16">
-                    <p className="fade-in-scale delay-10 text-hero-lg font-black text-glow-effect" style={{animationDelay: '10s'}}>
+                  <div className="text-center mt-12">
+                    <p className="fade-in-scale delay-9 text-hero-lg font-black text-glow-effect max-w-3xl mx-auto" style={{animationDelay: '9s'}}>
                       <span className="gradient-text animate-text-gradient">その答えは、ここにある。</span>
                     </p>
                   </div>
@@ -206,7 +202,7 @@ export default function HomePage() {
           )}
 
           {showText && (
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce fade-in-scale" style={{animationDelay: '11s'}}>
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce fade-in-scale" style={{animationDelay: '10s'}}>
               <ChevronDown className="w-8 h-8 text-gray-400" />
             </div>
           )}
